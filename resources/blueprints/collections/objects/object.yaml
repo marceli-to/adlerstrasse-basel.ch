@@ -1,0 +1,177 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: type
+            field:
+              options:
+                wohnung: Wohnung
+                keller: Keller
+                tiefgaragenparkplatz: Tiefgaragenparkplatz
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              default: wohnung
+              type: select
+              display: Typ
+              icon: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: number
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Nummer
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: floor
+            field:
+              options:
+                eg: EG
+                1.og: '1. OG'
+                2.og: '2. OG'
+                3.og: '3. OG'
+                4.og: '4. OG'
+                5.og: '5. OG'
+                attika: Attika
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              default: eg
+              type: select
+              display: Etage
+              icon: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: rooms
+            field:
+              options:
+                '2.5': '2.5'
+                '3.5': '3.5'
+                '4.5': '4.5'
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: Zimmer
+              icon: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: space_gross
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: BWF
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: space_outer
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Aussenfläche
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: price
+            field:
+              input_type: number
+              antlers: false
+              type: text
+              display: Preis
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: state
+            field:
+              options:
+                available: verfügbar
+                reserved: reserviert
+                sold: verkauft
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: Status
+              icon: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              default: available
+          -
+            handle: title
+            field:
+              type: text
+              required: false
+              validate:
+                - required
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - objects
+              max_items: 1
+              listable: false
+              localizable: true
+title: Object

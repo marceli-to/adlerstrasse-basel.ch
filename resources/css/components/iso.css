@@ -1,0 +1,42 @@
+.iso-cls-0{fill:#5F8551;}
+.iso-cls-1{fill:#ECECEC;}
+.iso-cls-2{fill:#50B25F;}
+.iso-cls-3{fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.iso-cls-4{fill:#B2B3B3;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.iso-cls-5{fill:#D7D9D9;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.iso-cls-6{fill:#878988;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.iso-cls-7{fill:#B1B2B2;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.iso-cls-8{fill:#C04145;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.iso-cls-9{fill:#50BE64;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.iso-cls-10{fill:#D7D9D9;}
+
+/* State classes */
+.is-active.is-available [class^="iso-cls-"],
+.is-active.is-available [class^="iso-cls-"] {
+  fill: #50BE64;
+}
+
+.is-active.is-taken [class^="iso-cls-"],
+.is-active.is-taken [class^="iso-cls-"] {
+  fill: #C04145;
+}
+
+[data-iso]:hover {
+  @apply cursor-pointer;
+}
+
+[data-object].is-active {
+  @apply !bg-mint !bg-opacity-20;
+}
+
+/* Floor classes */
+[data-iso-floor] {
+  @apply transition-transform duration-300;
+}
+.is-up {
+  @apply transform -translate-y-[16%] transition-transform duration-300;
+}
+
+.is-down {
+  @apply transform translate-y-[16%] transition-transform duration-300;
+}

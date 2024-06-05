@@ -1,0 +1,27 @@
+<header 
+  class="bg-white h-80 lg:h-124 w-full sticky top-0 z-[100] shadow-md md:!shadow-lg transition-all"
+  :class="{ '!shadow-none': menu === true }">
+  <div 
+    :class="{ '!h-[320px] shadow-md': menu === true }"
+    class="max-w-6xl mx-auto w-full bg-white h-full lg:!h-124 md:!shadow-none flex justify-between items-start lg:items-center px-15 lg:px-30 pt-20 lg:pt-0">
+    <a 
+      href="/"
+      title="Projekt">
+      {{ partial:icons/logo-project class="block w-auto h-40 lg:h-76" }}
+    </a>
+    <a 
+      href="javascript:;" 
+      x-on:click="menu = ! menu" 
+      title="{{ "Menü anzeigen" | trans }}"
+      :class="{ 'is-active': menu === true }"
+      class="group mt-12 flex justify-center md:hidden text-charcoal">
+      <span x-show="menu === false">
+        {{ partial:icons/burger class="w-24 h-auto" }}
+      </span>
+      <span x-cloak x-show="menu === true">
+        {{ partial:icons/cross class="w-20 h-auto" }}
+      </span>
+    </a>
+    {{ partial:menu/wrapper }}
+  </div>
+</header>

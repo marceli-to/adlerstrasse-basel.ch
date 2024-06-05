@@ -1,0 +1,112 @@
+@import "typo/webfonts.css";
+@import "vendor/mapbox.css";
+@import "vendor/swiper.css";
+@import "vendor/swiper-custom.css";
+@import "components/iso.css";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --swiper-navigation-size: 32px;
+}
+
+main {
+  @apply flex-1;
+}
+
+.imprint h1,
+.privacy h1,
+.imprint h2,
+.privacy h2 {
+  @apply text-base lg:text-xl text-mint mb-10
+}
+
+.imprint h1,
+.privacy h1 {
+  @apply mb-10 lg:mb-20
+}
+
+.imprint h2,
+.privacy h2 {
+  @apply mb-5 lg:text-lg
+}
+
+.privacy p {
+  @apply max-w-3xl;
+}
+
+.privacy a {
+  @apply text-mint underline hover:no-underline underline-offset-2;
+}
+
+p {
+  @apply mb-16 lg:mb-20;
+}
+
+p:last-of-type {
+  @apply mb-0;
+}
+
+strong {
+  @apply font-seria font-medium;
+}
+
+
+main ul {
+  @apply m-0 p-0 mb-16 lg:mb-20 list-['–_'];
+}
+
+main ul:last-child {
+  @apply mb-0;
+}
+
+main ul li {
+  @apply list-item ml-16
+}
+
+sub,
+sup {
+  font-size: 65%;
+}
+
+.marker {
+  background-image: url('../icons/marker.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 50px;
+  width: 40px;
+}
+
+.fancybox__backdrop {
+  @apply !bg-charcoal bg-opacity-90;
+}
+
+.fancybox__toolbar {
+  @apply !p-16;
+}
+
+.fancybox__content {
+  @apply !px-4 md:!px-12 lg:!px-24 xl:!px-48
+}
+
+.fancybox__nav .f-button,
+.fancybox__toolbar .f-button {
+  @apply !bg-transparent !border-none !p-0 h-24 w-24;
+}
+
+.fancybox__nav .f-button svg,
+.fancybox__toolbar .f-button svg {
+  @apply text-white;
+}
+
+.badge {
+  @apply bg-charcoal p-6 lg:p-8 text-sm leading-none text-white inline-flex items-center justify-between rounded-sm space-x-4 mr-6 mt-6 lg:mr-12 lg:mt-12 last-of-type:mr-0 cursor-pointer hover:bg-mint transition-all
+}
+
+.badge svg {
+  @apply w-12 h-12 ml-6 block
+}
