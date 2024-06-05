@@ -21,6 +21,7 @@ export default {
       colors: {
         'steel': '#355B73',
         'cloud': '#C2CEDB',
+        'pewter': '#626362',
       },
 
       fontFamily: {

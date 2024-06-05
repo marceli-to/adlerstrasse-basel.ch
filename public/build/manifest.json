@@ -1,31 +1,15 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-38a71e3b.css",
+    "file": "assets/app-2374412a.css",
     "isEntry": true,
     "src": "resources/css/app.css"
-  },
-  "resources/css/fonts/RuderPlakatMaxiLLWeb-Regular.woff": {
-    "file": "assets/RuderPlakatMaxiLLWeb-Regular-12e96667.woff",
-    "src": "resources/css/fonts/RuderPlakatMaxiLLWeb-Regular.woff"
-  },
-  "resources/css/fonts/RuderPlakatMaxiLLWeb-Regular.woff2": {
-    "file": "assets/RuderPlakatMaxiLLWeb-Regular-974ffe14.woff2",
-    "src": "resources/css/fonts/RuderPlakatMaxiLLWeb-Regular.woff2"
-  },
-  "resources/css/fonts/Seria-11-Medium.woff": {
-    "file": "assets/Seria-11-Medium-cf320d94.woff",
-    "src": "resources/css/fonts/Seria-11-Medium.woff"
-  },
-  "resources/css/fonts/Seria-11-Medium.woff2": {
-    "file": "assets/Seria-11-Medium-77ce07be.woff2",
-    "src": "resources/css/fonts/Seria-11-Medium.woff2"
   },
   "resources/icons/chevron-down.svg": {
     "file": "assets/chevron-down-82992c9a.svg",
     "src": "resources/icons/chevron-down.svg"
   },
   "resources/icons/marker.svg": {
-    "file": "assets/marker-4d3697fa.svg",
+    "file": "assets/marker-a52b0d58.svg",
     "src": "resources/icons/marker.svg"
   },
   "resources/js/app.css": {
@@ -36,7 +20,7 @@
     "css": [
       "assets/app-7430d6be.css"
     ],
-    "file": "assets/app-8209f16b.js",
+    "file": "assets/app-272f823e.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

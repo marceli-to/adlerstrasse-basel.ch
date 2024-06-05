@@ -21,7 +21,7 @@ main {
 .privacy h1,
 .imprint h2,
 .privacy h2 {
-  @apply text-base lg:text-xl text-steel mb-10
+  @apply font-lato-black font-black uppercase text-xl lg:text-3xl text-steel mb-10
 }
 
 .imprint h1,
@@ -31,7 +31,7 @@ main {
 
 .imprint h2,
 .privacy h2 {
-  @apply mb-5 lg:text-lg
+  @apply mb-5 text-md lg:text-xl
 }
 
 .privacy p {

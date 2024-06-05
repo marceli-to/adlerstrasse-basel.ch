@@ -5,127 +5,25 @@
   {{ /partial:layout/span }}
 
   {{ partial:layout/span class="!col-span-full md:!col-span-7 lg:!col-span-6" }}
-    {{ partial:components/headings/h2 title="Wohnungen" class="text-md lg:text-2xl !mb-5 lg:!mb-15" }}
 
-    {{ collection from="objects" as="objects" sort="order" }}
-      {{ partial:components/table/table class="mb-20 lg:mb-40" }}
-        {{ partial:components/table/thead }}
-        {{ objects }}
-          {{ partial:components/table/trow filterable="true" number="{{ number }}" state="{{ state }}" rooms="{{ rooms }}" floor="{{ floor }}" building="1" }}
-            {{ partial:components/table/tcell class="!pr-0" }}
-              {{ number }}{{ number == '501' || number == '601' || number == '5/601' ? '*' : '' }}
-            {{ /partial:components/table/tcell }}
-            {{ partial:components/table/tcell class="!pr-4 md:!pr-10" }}
-              {{ floor:label | replace(' ', '&nbsp;') }}
-            {{ /partial:components/table/tcell }}
-            {{ partial:components/table/tcell }}
-              {{ rooms }}
-            {{ /partial:components/table/tcell }}
-            {{ partial:components/table/tcell class="text-right" }}
-              {{ space_gross }}
-            {{ /partial:components/table/tcell }}
-            {{ partial:components/table/tcell class="text-right" }}
-              {{ space_outer }}
-            {{ /partial:components/table/tcell }}
-            {{ partial:components/table/tcell class="text-right" }}
-              {{ price | format_number(0, '.', '\'') }}
-            {{ /partial:components/table/tcell }}
-            {{ partial:components/table/tcell class="text-center" }}
-            {{ if number == '5/601' }}
-              <a href="/assets/downloads/zoe-siewerdtstrasse-wohnung_501_601.pdf" target="_blank" title="Download Grundriss Objekt {{ number }}">
-                {{ partial:icons/download }}
-              </a>
-            {{ else }}
-              <a href="/assets/downloads/zoe-siewerdtstrasse-wohnung_{{ number }}.pdf" target="_blank" title="Download Grundriss Objekt {{ number }}">
-                {{ partial:icons/download }}
-              </a>
-            {{ /if }}
-            {{ /partial:components/table/tcell }}
-              {{ partial:components/table/tcell class="text-xxs sm:text-sm text-right align-middle !pr-0" }}
-                {{ if state == 'available' }}
-                <a href="/kontakt?whg={{ number }}#formular"
-                  class="font-lato-black font-black text-white hover:brightness-110 bg-steel transition-all inline-flex items-center px-5 h-25 rounded-sm leading-none">
-                  Anfrage
-                </a>
-                {{ elseif state == 'reserved' }}
-                reserviert
-                {{ else }}
-                verkauft
-                {{ /if }}
-            {{ /partial:components/table/tcell }}
-          {{ /partial:components/table/trow }}
-        {{ /objects }}
-      {{ /partial:components/table/table }}
-      
+    {{ partial:objects/building building="h1" title="Haus 1 – Alderstrasse 30" }}
+    {{ partial:objects/building building="h2" title="Haus 2 – Alderstrasse 32" }}
 
-      {{ partial:components/table/table class="mb-20 lg:mb-40" }}
-        <thead class="border-b border-b-mint {{ class }}">
-          <tr class="md:relative md:bg-transparent md:top-0 z-60 [&>th]:py-12 [&>th]:align-middle [&>th]:leading-none [&>th]:font-lato-black [&>th]:font-black [&>th]:text-steel">
-            <th class="text-left w-[25%]">Typ</th>
-            <th class="text-left w-[10%]">Etage</th>
-            <th class="text-right w-[65%]">Preis<sup class="pl-2">3</sup></th>
-          </tr>
-        </thead>
-        <tbody>
-          {{ partial:components/table/trow filterable="false" }}
-            {{ partial:components/table/tcell }}
-              Parkplätze
-            {{ /partial:components/table/tcell }}
-            {{ partial:components/table/tcell }}
-              TG
-            {{ /partial:components/table/tcell }}
-            {{ partial:components/table/tcell class="text-right !pr-0" }}
-              55'000
-            {{ /partial:components/table/tcell }}
-          {{ /partial:components/table/trow }}
-          {{ partial:components/table/trow filterable="false" }}
-            {{ partial:components/table/tcell }}
-            Motorradplatz
-            {{ /partial:components/table/tcell }}
-            {{ partial:components/table/tcell }}
-              TG
-            {{ /partial:components/table/tcell }}
-            {{ partial:components/table/tcell class="text-right !pr-0" }}
-              15'000
-            {{ /partial:components/table/tcell }}
-          {{ /partial:components/table/trow }}
-        </tbody>
-      {{ /partial:components/table/table }}
+    <table class="text-xs lg:text-sm">
+      <tr>
+        <td class="align-top w-8"><sup>1</sup></td>
+        <td>Hauptnutzfläche</td>
+      </tr>
+      <tr>
+        <td class="align-top w-8"><sup>2</sup></td>
+        <td>Aussenfläche</td>
+      </tr>
+      <tr>
+        <td class="align-top w-8"><sup>3</sup></td>
+        <td>Bruttomietzins pro Monat, in CHF</td>
+      </tr>
+    </table>
 
-   
-      <table class="text-xs lg:text-sm">
-        <tr>
-          <td class="align-top w-8"><sup>1</sup></td>
-          <td>Bruttowohnflächen: Fläche inklusive Innenwände ohne Installationsschächte und Aussenwände, Balkone und Terrassen</td>
-        </tr>
-        <tr>
-          <td class="align-top w-8"><sup>2</sup></td>
-          <td>Aussenfläche</td>
-        </tr>
-        <tr>
-          <td class="align-top w-8"><sup>3</sup></td>
-          <td>in CHF</td>
-        </tr>
-      </table>
-      <div class="flex mt-16 lg:mt-20">
-        <div class="w-8">*</div>
-        <div class="w-full">Es besteht die Möglichkeit, die beiden 2.5-Zi-Wohnungen (Nr. 501+601) zu einer grosszügigen 4.5-Zi-Maisonettewohnung zusammenzulegen.<br>Wir erläutern Ihnen gerne die Details zu den beiden Varianten und freuen uns auf Ihr Interesse.</div>
-      </div>
-      <div class="mt-15 lg:mt-30">
-        <div>
-          <a 
-            href="/kontakt/#formular" 
-            title="Kontaktformular" 
-            class="bg-steel text-white px-15 py-10 lg:px-16 lg:py-12 rounded-sm uppercase font-lato-black font-black tracking-wider inline-flex items-center justify-center hover:brightness-110 transition-all">
-            <span class="block leading-none">Kontaktformular</span>
-          </a>
-        </div>
-      </div>
-
-    {{ /collection }}
   {{ /partial:layout/span }}
-
-
-
 
 {{ /partial:layout/grid }}

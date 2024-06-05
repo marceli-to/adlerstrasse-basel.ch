@@ -5,35 +5,34 @@ tabs:
       -
         fields:
           -
-            handle: type
-            field:
-              options:
-                wohnung: Wohnung
-                keller: Keller
-                tiefgaragenparkplatz: Tiefgaragenparkplatz
-              taggable: false
-              push_tags: false
-              multiple: false
-              clearable: false
-              searchable: true
-              cast_booleans: false
-              default: wohnung
-              type: select
-              display: Typ
-              icon: select
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
             handle: number
             field:
               input_type: text
               antlers: false
               type: text
               display: Nummer
-              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: building
+            field:
+              options:
+                h1: 'Haus 1'
+                h2: 'Haus 2'
+                h3: 'Haus 3'
+                h4: 'Haus 4'
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              default: h1
+              type: select
+              display: Haus
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -43,13 +42,11 @@ tabs:
             handle: floor
             field:
               options:
+                hg: HG
                 eg: EG
                 1.og: '1. OG'
                 2.og: '2. OG'
-                3.og: '3. OG'
-                4.og: '4. OG'
-                5.og: '5. OG'
-                attika: Attika
+                dg: DG
               taggable: false
               push_tags: false
               multiple: false
@@ -59,7 +56,6 @@ tabs:
               default: eg
               type: select
               display: Etage
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -80,7 +76,6 @@ tabs:
               cast_booleans: false
               type: select
               display: Zimmer
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -92,8 +87,7 @@ tabs:
               input_type: text
               antlers: false
               type: text
-              display: BWF
-              icon: text
+              display: HNF
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -106,20 +100,18 @@ tabs:
               antlers: false
               type: text
               display: Aussenfläche
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
           -
-            handle: price
+            handle: rent_gross
             field:
               input_type: number
               antlers: false
               type: text
-              display: Preis
-              icon: text
+              display: Mietzins
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -136,7 +128,7 @@ tabs:
               options:
                 available: verfügbar
                 reserved: reserviert
-                sold: verkauft
+                rented: vermietet
               taggable: false
               push_tags: false
               multiple: false
@@ -145,7 +137,6 @@ tabs:
               cast_booleans: false
               type: select
               display: Status
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible

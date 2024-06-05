@@ -4,18 +4,18 @@ email:
   -
     id: lv2hk7hm
     to: m@marceli.to
-    from: no-reply@zoe-oerlikon.ch
-    reply_to: zoe@cavegn-immobilien.ch
-    subject: 'Kontaktformular zoe-oerlikon.ch'
+    from: no-reply@adlerstrasse-basel.ch
+    reply_to: no-reply@adlerstrasse-basel.ch
+    subject: 'Kontaktformular adlerstrasse-basel.ch'
     mailer: smtp
     html: email/html/contact-owner
     text: email/text/contact-owner
   -
     id: lwq9kyrs
     to: '{{ email }}'
-    from: no-reply@zoe-oerlikon.ch
-    reply_to: zoe@cavegn-immobilien.ch
-    subject: 'Kontaktformular zoe-oerlikon.ch'
+    from: no-reply@adlerstrasse-basel.ch
+    reply_to: no-reply@adlerstrasse-basel.ch
+    subject: 'Kontaktformular adlerstrasse-basel.ch'
     html: email/html/contact-user
     text: email/text/contact-user
     mailer: smtp

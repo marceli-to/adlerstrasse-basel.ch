@@ -55,9 +55,16 @@ const Filter = (function() {
         if (v.length > 0) {
           attrString += `[data-${k}="${v}"]`;
         }
+
+        // if k is 'object-building' then hide all buildings except the one selected
+        if (k === 'object-building') {
+          document.querySelectorAll(selectors.building).forEach(function(item) {
+            item.style.display = 'none';
+          });
+          document.querySelector(`[data-building="${v}"]`).style.display = 'block';
+        }
       });
       if (attrString.length > 0) {
-        console.log(attrString);
         document.querySelectorAll(selectors.object).forEach(function(item) {
           item.style.display = 'none';
         });
