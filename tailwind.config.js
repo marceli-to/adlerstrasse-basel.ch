@@ -19,15 +19,13 @@ export default {
       },
 
       colors: {
-        'mint': '#50BE64',
-        'charcoal': '#1e1e1e',
-        'stone': '#8e8e8d'
+        'steel': '#355B73',
+        'cloud': '#C2CEDB',
       },
 
       fontFamily: {
-        ruder: ['RuderPlakatMaxiLLWeb-Regular', ...defaultTheme.fontFamily.sans],
-        seria: ['Seria-11-Medium', ...defaultTheme.fontFamily.sans],
-        helvetica: ['Helvetica', ...defaultTheme.fontFamily.sans],
+        'lato-regular': ['Lato', ...defaultTheme.fontFamily.sans],
+        'lato-black': ['Lato', ...defaultTheme.fontFamily.sans],
       },
 
       fontSize: {
@@ -36,16 +34,11 @@ export default {
         'xs': '0.8125rem', // 13px
         'sm': '0.875rem', // 14px
         'base': '1rem', // 16px
-        'md': '1.125rem', // 18px
-
+        'md': '1.0625rem', // 17px
         'lg': '1.25rem', // 20px
         'xl': '1.5rem', // 24px
         '2xl': '1.75rem', // 28px
         '3xl': '2.125rem', // 34px
-
-        // 5lx, 82px in rem
-        '5xl': '5.125rem', // 82px
-        '6xl': '8.75rem', // 140px
       },
       
       zIndex: {

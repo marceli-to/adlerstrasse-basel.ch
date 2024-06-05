@@ -1,45 +1,44 @@
 {{ partial:layout/section }}
-  {{ partial:misc/badge }}
-  {{ partial:components/swiper/wrapper }}
-    {{ partial:components/swiper/slide image="zoe-siewerdtstrasse-cam-3" alt="" }}
-    {{ partial:components/swiper/slide image="zoe-siewerdtstrasse-cam-4" alt="" }}
-    {{ partial:components/swiper/slide image="zoe-siewerdtstrasse-5" alt="" }}
-  {{ /partial:components/swiper/wrapper }}
+  {{ partial:components/media/visual image="adlerstrasse-basel-1" alt="" }}
 {{ /partial:layout/section }}
 
-{{ partial:layout/section }}
-{{ partial:layout/inner }}
-  {{ partial:components/headings/h1 title="Projekt" }}
-  <div class="max-w-3xl">
-    {{ partial:components/headings/h2 title="ZOE – you will örLIKE it!" }}
-
-    <p>In Zürich Oerlikon, neben Zürichs pulsierender Kulturmeile, entstehen an einer ruhigen Lage an der Siewerdtstrasse 20, zwanzig schicke Eigentumswohnungen. Das Projekt ZOE bietet mit seiner einzigartigen Lage den Käufern ein individuelles Wohnerlebnis auf höchstem Niveau!<br>Die 2.5 und 3.5-Zimmerwohnungen bestechen durch offene Grundrisse und die bodentiefen Fenster verleihen dem Projekt ein Gefühl von Freiheit und Stadtgefühl der Extraklasse.</p>
-    <p>Der Fokus bei der Gestaltung des Gebäudes an der Siewerdtstrasse wurde gezielt auf neutrale, pure und dezente Materialien gelegt. Der warme Grünton der Fassade und die grossen Fenstern ermöglichen mit der zeitgemäss-modernen Architektur, dass sich das Gebäude harmonisch in die umliegende Umgebung einpasst und somit das Stadtbild von Oerlikon positiv mitgestaltet.</p>
-    <p>ZOE überzeugt durch sein zeitgemässes Design und seine hochwertige Bauausführung und schafft für seine Bewohner ein anspruchsvolles Wohnerlebnis. Die optimale Anordnung der grossen Fenster ermöglicht den Bewohnern inmitten von Oerlikon den herrlichen Blick ins Grüne. Gut durchdachte Grundrisse und loftige Räume schaffen ein leichtes und offenes Wohngefühl, das durch raffinierte Raumkonzepte vielfältige Möblierungsmöglichkeiten bietet. Bei der Materialwahl lag der Fokus darauf, eine vertrauensvolle, beruhigende Umgebung in Verbindung mit höchster Qualität zu schaffen. Ihre eigenen Vorstellungen und Ideen berücksichtigen wir gerne! ZOE begeistert von der Tiefgarage bis hinauf ins Attikageschoss.</p>
-  </div>
-  <div class="mt-15 lg:mt-30 flex space-x-15 lg:space-x-25">
-    <div>
-      <a href="/assets/downloads/zoe-siewerdtstrasse-verkaufsplaene.pdf" 
-        target="_blank" 
-        title="Verkaufspläne herunterladen"
-        class="bg-mint text-white px-15 py-10 lg:px-16 lg:py-12 rounded-sm uppercase font-seria tracking-wider flex items-center w-full justify-center hover:brightness-110 transition-all">
-        <span class="block leading-none">Verkaufspläne</span>
-      </a>
-    </div>
-  </div>
-{{ /partial:layout/inner }}
-{{ /partial:layout/section }}
-
-{{ partial:layout/section }}
-
+{{ partial:layout/section class="bg-cloud" }}
   {{ partial:layout/inner }}
+    {{ partial:components/headings/h1 title="Projekt" }}
+    {{ partial:layout/grid }}
+      {{ partial:layout/span }}
+        <p>Mit dem Projekt Adlerstrasse werden an zentraler und begehrter Lage frisch sanierte 1.5- bis 5.5-Zimmerwohnungen verfügbar. Die Wohnungen sind auf vier zusammenhängende Häuser verteilt, welche etappenweise saniert werden und in neuem Glanz erscheinen.</p>
+        <p>Ausgestattet mit hochwertigen Materialen bieten die Wohnungen ein zeitgemässes und komfortables Wohnen an. Die Mietwohnungen an Adlerstrasse überzeugen mit vielfältigen Grundrissvarianten und attraktiven, privaten Aussenbereichen, welche in den Innenhof gerichtet sind. Zusätzlich stehen den Mietern 35 Einstellplätze und vier Bastelräume zur Anmietung zur Verfügung, was zusätzlichen Komfort und Flexibilität bietet.</p>
+        <p>Im Hinterhof der Überbauung verbirgt sich ein idyllischer Spielplatz, umgeben von Bäumen und Sträuchern, der zum Verweilen und Spielen einlädt. Das Cheminée bietet zusätzlich kulinarische Erlebnisse im gemütlichen beisammen sein. Durch die Kombination der Städtischen Lage mit attraktiver Aussenanlage wurde eine ideale Lösung für Familien, junge Paare sowie Singles geschaffen.
+        <p>Dank der zentralen und begehrten Lage in Grossbasel profitieren die Bewohner von kurzen Wegen innerhalb der Stadt Basel. Eine hervorragende Infrastruktur sowie ausgezeichnete Anbindungen an den öffentlichen Verkehr sind gegeben, wobei der Bahnhof Basel nur zehn Minuten entfernt ist.</p>
+        <p>Die Überbauung zeichnet sich nicht nur durch ihre ausgezeichnete Lage aus, sondern auch durch einen vielfältigen Mix an Wohnungen und grosszügigem Aussenbereich.</p>
+        {{ partial:components/headings/h3 title="Die Häuser werden in vier Etappen fertiggestellt" class="mt-20" }}
+        <table>
+          <tr>
+            <td class="pr-30 lg:pr-50">Haus 1 – Adlerstrasse 30:</td>
+            <td>1. September 2024</td>
+          </tr>
+          <tr>
+            <td>Haus 2 – Adlerstrasse 32:</td>
+            <td>1. Oktober 2024</td>
+          </tr>
+          <tr>
+            <td>Haus 3 – Adlerstrasse 34:</td>
+            <td>1. Dezember 2024</td>
+          </tr>
+          <tr>
+            <td>Haus 4 – Adlerstrasse 36:</td>
+            <td>1. Dezember 2024</td>
+          </tr>
+        </table>
+      {{ /partial:layout/span }}
 
-    <div class="sm:grid sm:grid-cols-12 sm:gap-15 lg:gap-20">
-      {{ partial:components/fancybox/item image="/assets/zoe-siewerdtstrasse-cam-1" alt="" class="aspect-square" }}
-      {{ partial:components/fancybox/item image="/assets/zoe-siewerdtstrasse-cam-2" alt="" class="aspect-square" }}
-      {{ partial:components/fancybox/item image="/assets/zoe-siewerdtstrasse-cam-5" alt="" class="aspect-square" }}
-    </div>
+      {{ partial:layout/span }}
+        {{ partial:components/media/image image="adlerstrasse-basel-3" alt="" wrapperClass="mb-20 lg:mb-40" }}
+        {{ partial:components/media/image image="adlerstrasse-basel-4" alt="" wrapperClass="mb-20 lg:mb-40" }}
+        {{ partial:components/media/image image="adlerstrasse-basel-5" alt="" }}
+      {{ /partial:layout/span }}
 
+    {{ /partial:layout/grid }}
   {{ /partial:layout/inner }}
-
 {{ /partial:layout/section }}

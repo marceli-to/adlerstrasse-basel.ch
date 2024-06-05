@@ -1,120 +1,31 @@
+{{ partial:layout/section }}
+  {{ partial:components/media/visual image="adlerstrasse-basel-6" alt="" }}
+{{ /partial:layout/section }}
 
-{{ partial:layout/section class="bg-mint text-white" }}
+{{ partial:layout/section }}
   {{ partial:layout/inner }}
-
-  {{ partial:components/headings/h1 title="Lage" class="!mt-20" innerClass="!top-0 !left-0" }}
-
+    {{ partial:components/headings/h1 title="Lage" }}
     {{ partial:layout/grid }}
-
       {{ partial:layout/span }}
-      <p>Die Siewerdtstrasse verbindet urbanes Leben mit entspanntem Wohnen in Ruhe an unschlagbarer Top-Lage. Nebst Zürichs beliebtester Kulturmeile befinden sich zahlreiche Einkaufsmöglichkeiten, trendige Restaurants, angesagte Bars und gemütliche Cafés sowie der legendäre Wochenmarkt in unmittelbarer Nähe zur Liegenschaft.</p>
-      <p>Oerlikon ist einer der lebendigsten und angesagtesten Stadtteile Zürichs! Mit einer gelungenen Mischung aus urbanem Flair und gemütlichen Trubel und Nachbarschaftsatmosphäre, bietet Oerlikon seinen Bewohnern ein einzigartiges Wohn- und Lebensgefühl.</p>
-      <p>Die Lage spricht für sich: Zentral und gut angebunden, ist Oerlikon der ideale Ausgangspunkt, um das Beste aus der pulsierenden Metropole Zürich zu erleben. Mit exzellenter Anbindung an den öffentlichen Nahverkehr, einschliesslich Bussen, Strassenbahnen und S-Bahnen, sind die Möglichkeiten grenzenlos. In nur wenigen Minuten erreichen Sie das Stadtzentrum, den Flughafen oder andere beliebte Ziele in der Umgebung sowie auch International!</p>
-      <p>Insgesamt bietet Oerlikon ein dynamisches und vielseitiges Umfeld, das sowohl für Alleinstehende, Paare als auch für kleinen Familien attraktiv ist. Eine Vielzahl von Kultur-, Event-, Freizeit- und Sportangeboten befindet sich direkt vor der Haustüre und kann bequem zu Fuss erreicht werden. Entdecken Sie die Vorzüge dieses lebendigen Stadtteils und lassen Sie sich von seinem Charme verzaubern!</p>
-      <div class="my-20 lg:my-40">
-          {{ partial:components/headings/h3 class="text-white mb-12 lg:mb-24" title="Mobilität und Anschlüsse" }}
-          <table class="w-full table mb-20 lg:mb-40">
-            <thead class="[&>tr>th]:text-left border-b border-b-white">
-              <th>Ort</th>
-              <th>Auto</th>
-              <th class="!text-right">ÖV</th>
-            </thead>
-            <tbody>
-              <tr class="table-row border-b border-b-white [&>td]:pt-4 [&>td]:pb-2">
-                <td>Zürich HB</td>
-                <td>15 min</td>
-                <td class="text-right">10 min</td>
-              </tr>
-              <tr class="table-row border-b border-b-white [&>td]:pt-4 [&>td]:pb-2">
-                <td>Zürich Flughafen</td>
-                <td>10 min</td>
-                <td class="text-right">10 min</td>
-              </tr>
-              <tr class="table-row border-b border-b-white [&>td]:pt-4 [&>td]:pb-2">
-                <td>Regensdorf</td>
-                <td>15 min</td>
-                <td class="text-right">15 min</td>
-              </tr>
-              <tr class="table-row border-b border-b-white [&>td]:pt-4 [&>td]:pb-2">
-                <td>Winterthur</td>
-                <td>30 min</td>
-                <td class="text-right">25 min</td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="w-full table">
-            <thead class="[&>tr>th]:text-left border-b border-b-white">
-              <th>Ort</th>
-              <th>Fahrrad</th>
-              <th class="!text-right">zu Fuss</th>
-            </thead>
-            <tbody>
-              <tr class="table-row border-b border-b-white [&>td]:pt-4 [&>td]:pb-2">
-                <td>Bahnhof Oerlikon</td>
-                <td>2 min</td>
-                <td class="text-right">4 min</td>
-              </tr>
-              <tr class="table-row border-b border-b-white [&>td]:pt-4 [&>td]:pb-2">
-                <td>Hallenstadion</td>
-                <td>2 min</td>
-                <td class="text-right">2 min</td>
-              </tr>
-              <tr class="table-row border-b border-b-white [&>td]:pt-4 [&>td]:pb-2">
-                <td>Theater 11</td>
-                <td>3 min</td>
-                <td class="text-right">4 min</td>
-              </tr>
-              <tr class="table-row border-b border-b-white [&>td]:pt-4 [&>td]:pb-2">
-                <td>Sternen Oerlikon</td>
-                <td>2 min</td>
-                <td class="text-right">6 min</td>
-              </tr>
-              <tr class="table-row border-b border-b-white [&>td]:pt-4 [&>td]:pb-2">
-                <td>Marktplatz</td>
-                <td>2 min</td>
-                <td class="text-right">7 min</td>
-              </tr>
-              <tr class="table-row border-b border-b-white [&>td]:pt-4 [&>td]:pb-2">
-                <td>MFO-Park</td>
-                <td>4 min</td>
-                <td class="text-right">11 min</td>
-              </tr>
-              <tr class="table-row border-b border-b-white [&>td]:pt-4 [&>td]:pb-2">
-                <td>Freibad Allenmoos</td>
-                <td>5 min</td>
-                <td class="text-right">17 min</td>
-              </tr>
-              <tr class="table-row border-b border-b-white [&>td]:pt-4 [&>td]:pb-2">
-                <td>Hallenbad Oerlikon</td>
-                <td>5 min</td>
-                <td class="text-right">11 min</td>
-              </tr>
-              <tr class="table-row border-b border-b-white [&>td]:pt-4 [&>td]:pb-2">
-                <td>Kunsteisbahn Oerlikon</td>
-                <td>5 min</td>
-                <td class="text-right">7 min</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div>
-          <a href="https://maps.app.goo.gl/6xzdLZnPeGXB4nQu7" 
-            target="_blank" 
-            title="Google Maps öffnen"
-            class="bg-white text-mint px-15 py-10 lg:px-16 lg:py-12 rounded-sm uppercase font-seria tracking-wider inline-flex items-center justify-center hover:bg-charcoal hover:text-white transition-all">
-            <span class="block leading-none">Google Maps</span>
-          </a>
+        <p>Die Überbauung Adlerstrasse befindet sich im beliebten Gellert Quartier im Bezirk Grossbasel. Diese Gegend zeichnet sich durch ihr vielfältiges Angebot an Schulen, Einkaufsmöglichkeiten und Parks aus, was ideale Bedingungen für ein erfülltes Leben bietet. Der nahegelegene Rhein lädt zu sportlichen Aktivitäten ein und bietet auch die Möglichkeit für entspannte Momente im Freien. Die zentrale Lage und die naturnahe Erholung machen die Adlerstrasse zu einem attraktiven Wohnort für Menschen jeden Alters.</p>
+        <p>Der öffentliche Verkehr befindet sich direkt vor der Haustüre und somit profitieren Sie von den sehr guten Anschlüssen. Die Basler Innenstadt ist ebenfalls mit dem Bus oder Tram in wenigen Fahrminuten bequem erreichbar, sodass Sie schnell und unkompliziert das Herz der Stadt erleben können. Durch die unmittelbare Nähe zur Autobahn ist die Lage des Standorts auch für Automobilisten äusserst attraktiv. Die schnelle und bequeme Anbindung an das Autobahnnetz ermöglicht eine zeitsparende Anreise und eine reibungslose Anbindung an die umliegenden Städte und Regionen.</p>
+        <div class="mt-15 lg:mt-30 flex space-x-15 lg:space-x-25">
+          <div>
+            <a 
+              href="https://maps.app.goo.gl/kUiLxFCYvDFBKxpF6" 
+              target="_blank" 
+              title="Google Maps"
+              class="bg-steel text-white px-15 py-10 lg:px-16 lg:py-12 rounded-sm uppercase font-lato-black font-black tracking-wider flex items-center w-full justify-center hover:brightness-110 hover:text-cloud transition-all">
+              <span class="block leading-none">Google Maps</span>
+            </a>
+          </div>
         </div>
       {{ /partial:layout/span }}
 
-      {{ partial:layout/span class="flex flex-col gap-y-16 lg:gap-y-32" }}
-        {{ partial:components/media/image image="zoe-siewerdtstrasse-lage-1" alt="" }}
-        {{ partial:components/media/image image="zoe-siewerdtstrasse-lage-2" alt="" }}
-        {{ partial:components/media/image image="zoe-siewerdtstrasse-lage-3" alt="" }}
+      {{ partial:layout/span }}
+        {{ partial:components/media/image image="adlerstrasse-basel-7" alt="" }}
       {{ /partial:layout/span }}
 
     {{ /partial:layout/grid }}
-
   {{ /partial:layout/inner }}
-
 {{ /partial:layout/section }}

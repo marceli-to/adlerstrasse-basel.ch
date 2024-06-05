@@ -8,7 +8,7 @@ const initMap = () => {
   var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/marcelitoooo/ck16ms7m51nlo1cmwnqrbjuyq?optimize=true',
-      center: [8.549060044180237,47.412181699087625], 
+      center: [7.610020209998718,47.54688235541435], 
       zoom: zoom
   });
   map.addControl(new mapboxgl.NavigationControl());
@@ -20,11 +20,11 @@ const initMap = () => {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [8.549060044180237,47.412181699087625]
+        coordinates: [7.610020209998718,47.54688235541435]
       },
       properties: {
         title: 'Adlerstrasse Basel',
-        description: 'Pfäffikon ZH'
+        description: ''
       }
     }]
   };

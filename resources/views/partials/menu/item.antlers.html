@@ -1,7 +1,7 @@
 <li>
   <a 
     href="{{ url }}" 
-    class="block w-full font-seria font-medium tracking-wide text-mint text-lg md:text-base lg:text-md hover:underline decoration-2 underline-offset-4 lg:underline-offset-8 {{ is_current || is_parent ? 'underline' : '' }}"
+    class="block w-full font-lato-black font-black text-lg md:text-base lg:text-lg tracking-wider text-steel hover:text-white md:text-white md:hover:text-cloud transition-color {{ is_current || is_parent ? '!text-white md:!text-cloud' : '' }}"
     target="{{ is_external ? '_blank' : '_self' }}"
     title="{{ title }}">
     {{ title }}

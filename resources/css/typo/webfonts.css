@@ -2,17 +2,4 @@
  * Typography - Webfonts
  * -----------------------------------------------------------------------------
  */
-
-@font-face {
-  font-family: 'Seria-11-Medium';
-  src: url('fonts/Seria-11-Medium.woff2') format('woff2'), url('fonts/Seria-11-Medium.woff') format('woff');
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'RuderPlakatMaxiLLWeb-Regular';
-  src: url('fonts/RuderPlakatMaxiLLWeb-Regular.woff2') format('woff2'), url('fonts/RuderPlakatMaxiLLWeb-Regular.woff') format('woff');
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
