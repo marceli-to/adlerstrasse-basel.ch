@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8a3982fcdce0eaa829f7803d117154b",
+    "content-hash": "57974f442d470df22a8c514e601e5f4a",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -1633,6 +1633,73 @@
                 "source": "https://github.com/corcel/corcel/tree/v7.0.0"
             },
             "time": "2023-06-09T21:06:24+00:00"
+        },
+        {
+            "name": "jonassiewertsen/statamic-livewire",
+            "version": "v3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jonassiewertsen/statamic-livewire.git",
+                "reference": "36ad6fb4d12ae095e47f4c4c671192278060adeb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jonassiewertsen/statamic-livewire/zipball/36ad6fb4d12ae095e47f4c4c671192278060adeb",
+                "reference": "36ad6fb4d12ae095e47f4c4c671192278060adeb",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^10.0|^11.0",
+                "livewire/livewire": "^3.0",
+                "php": "^8.1",
+                "statamic/cms": "^4.23.2|^5.0"
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "statamic": {
+                    "name": "Livewire",
+                    "description": "A Laravel Livewire integration for Statamics Antlers engine"
+                },
+                "laravel": {
+                    "providers": [
+                        "Jonassiewertsen\\Livewire\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jonassiewertsen\\Livewire\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonas Siewertsen",
+                    "homepage": "https://jonassiewertsen.com"
+                }
+            ],
+            "description": "A Laravel Livewire integration for Statamics Antlers engine.",
+            "keywords": [
+                "addon",
+                "laravel",
+                "livewire",
+                "statamic"
+            ],
+            "support": {
+                "docs": "https://github.com/jonassiewertsen/statamic-livewire",
+                "issues": "https://github.com/jonassiewertsen/statamic-livewire/issues",
+                "source": "https://github.com/jonassiewertsen/statamic-livewire/tree/v3.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/jonassiewertsen",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-06-03T10:15:17+00:00"
         },
         {
             "name": "laragraph/utils",
