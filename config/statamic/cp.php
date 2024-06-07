@@ -41,9 +41,9 @@ return [
         //'getting_started',
         [ 
           'type' => 'collection',
-          'collection' => 'objects',
+          'collection' => 'pages',
           'limit' => 25,
-          'title' => 'Objekte',
+          'title' => 'Seiten',
           'width' => 100,
           'sort' => 'order',
         ], 

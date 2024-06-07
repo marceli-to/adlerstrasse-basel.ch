@@ -1,23 +1,61 @@
-.iso-cls-0{fill:#5F8551;}
-.iso-cls-1{fill:#ECECEC;}
-.iso-cls-2{fill:#50B25F;}
-.iso-cls-3{fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-.iso-cls-4{fill:#B2B3B3;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-.iso-cls-5{fill:#D7D9D9;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-.iso-cls-6{fill:#878988;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-.iso-cls-7{fill:#B1B2B2;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-.iso-cls-8{fill:#C04145;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-.iso-cls-9{fill:#50BE64;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-.iso-cls-10{fill:#D7D9D9;}
+.iso-cls-1 {
+  fill: #365b74;
+}
+
+.iso-cls-1, .iso-cls-2, .iso-cls-3, .iso-cls-4, .iso-cls-5, .iso-cls-6, .iso-cls-7, .iso-cls-8, .iso-cls-9 {
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-width: .2px;
+}
+
+.iso-cls-1, .iso-cls-3, .iso-cls-4, .iso-cls-5, .iso-cls-6, .iso-cls-7, .iso-cls-9 {
+  stroke-linejoin: round;
+}
+
+.iso-cls-2, .iso-cls-4 {
+  fill: none;
+}
+
+.iso-cls-2, .iso-cls-8 {
+  stroke-miterlimit: 10;
+}
+
+.iso-cls-3 {
+  fill: #878988;
+}
+
+.iso-cls-5 {
+  fill: #a7a9a9;
+}
+
+.iso-cls-10, .iso-cls-11 {
+  stroke-width: 0px;
+}
+
+.iso-cls-6 {
+  fill: #cfd0d0;
+}
+
+.iso-cls-7 {
+  fill: #c53540;
+}
+
+.iso-cls-8, .iso-cls-11 {
+  fill: #fff;
+}
+
+.iso-cls-9 {
+  fill: #8fa4b8;
+}
 
 /* State classes */
 .is-active.is-available [class^="iso-cls-"],
-.is-active.is-available [class^="iso-cls-"] {
-  fill: #50BE64;
+.is-active.is-available[class^="iso-cls-"] {
+  fill: #365b74;
 }
 
 .is-active.is-taken [class^="iso-cls-"],
-.is-active.is-taken [class^="iso-cls-"] {
+.is-active.is-taken[class^="iso-cls-"] {
   fill: #C04145;
 }
 
@@ -39,4 +77,8 @@
 
 .is-down {
   @apply transform translate-y-[16%] transition-transform duration-300;
+}
+
+.no-transform {
+  @apply !transform-none;
 }

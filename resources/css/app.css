@@ -13,6 +13,8 @@
   --swiper-navigation-size: 32px;
 }
 
+[x-cloak] { display: none !important; }
+
 main {
   @apply flex-1;
 }
@@ -101,12 +103,4 @@ sup {
 .fancybox__nav .f-button svg,
 .fancybox__toolbar .f-button svg {
   @apply text-white;
-}
-
-.badge {
-  @apply bg-steel p-6 lg:p-8 text-sm leading-none text-white inline-flex items-center justify-between rounded-sm space-x-4 mr-6 mt-6 lg:mr-12 lg:mt-12 last-of-type:mr-0 cursor-pointer hover:bg-steel transition-all
-}
-
-.badge svg {
-  @apply w-12 h-12 ml-6 block
 }

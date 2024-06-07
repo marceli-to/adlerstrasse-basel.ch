@@ -68,23 +68,6 @@ const Iso = (function() {
     // get data set
     const objectData = object.dataset;
 
-
-    if (objectData.objectNumber == '5/601') {
-      const isos = document.querySelectorAll('[data-iso="' + objectData.objectNumber + '"]');
-      isos.forEach(function(iso) {
-        if (!iso) return;
-        iso.classList.remove('hidden');
-        iso.classList.add('is-active', objectData.objectState === 'available' ? 'is-available' : 'is-taken');
-
-        // get iso item 'data-iso-floor="dach"'
-        const floor = document.querySelector('[data-iso-floor="dach"]');
-        if (!floor) return;
-        floor.classList.add('is-up')
-      });
-
-      return;
-    }
-
     // get iso item data-iso="data.objectNumber" within data-iso-building="data.objectBuilding"
     const isos = document.querySelectorAll('[data-iso="' + objectData.objectNumber + '"]');
 
@@ -92,7 +75,7 @@ const Iso = (function() {
 
       // add class '.is-active.is-available' to iso item if it exists
       if (!iso) return;
-      iso.classList.add('is-active', objectData.objectState === 'available' ? 'is-available' : 'is-taken');
+      iso.classList.add('is-active', objectData.objectState === 'free' ? 'is-available' : 'is-taken');
 
       if (moveSiblings) {
         // Get the parent <g> element for the object
@@ -115,7 +98,7 @@ const Iso = (function() {
     if (!object) return;
     const objectData = object.dataset;
     object.classList.add('is-active');
-    iso.classList.add('is-active', objectData.objectState === 'available' ? 'is-available' : 'is-taken');
+    iso.classList.add('is-active', objectData.objectState === 'free' ? 'is-available' : 'is-taken');
   };
 
   const clearIso = function() {
@@ -132,13 +115,6 @@ const Iso = (function() {
       siblings.forEach(function(sibling) {
         sibling.classList.remove('is-up');
       });
-    });
-
-    // get iso 'data-iso="5/601"' and add class 'hidden'
-    const isos = document.querySelectorAll('[data-iso="5/601"]');
-    isos.forEach(function(iso) {
-      if (!iso) return;
-      iso.classList.add('hidden');
     });
   };
 
