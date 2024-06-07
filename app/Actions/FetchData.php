@@ -9,7 +9,6 @@ class FetchData
     $api_uri = env('FLATFOX_API_URI');
     $data = $this->get($api_uri);
     $json_data = collect(json_decode($data, true));
-
     $apartment_pages[] = isset($json_data['results']) ? $json_data['results'] : [];
 
     // if $json_data['next'] is not null, there are more pages to fetch

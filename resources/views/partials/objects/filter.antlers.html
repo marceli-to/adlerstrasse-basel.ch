@@ -8,9 +8,9 @@
         data-filterType="object-state" 
         aria-label="Verfügbarkeit">
         <option value="NULL">Alle Wohnungen</option>
-        <option value="available">frei</option>
+        <option value="free">frei</option>
         <option value="reserved">reserviert</option>
-        <option value="rented">vermietet</option>
+        <option value="taken">vermietet</option>
       </select>
     </div>
   {{ /partial:layout/span }}
@@ -39,10 +39,10 @@
         data-filterType="object-building" 
         aria-label="Etage">
         <option value="NULL">Alle Hausteile</option>
-        <option value="h1">Haus 1</option>
-        <option value="h2">Haus 2</option>
-        <option value="h3">Haus 3</option>
-        <option value="h4">Haus 4</option>
+        <option value="01">Haus 1</option>
+        <option value="02">Haus 2</option>
+        <option value="03">Haus 3</option>
+        <option value="04">Haus 4</option>
       </select>
     </div>
   {{ /partial:layout/span }}
@@ -55,11 +55,11 @@
         data-filterType="object-floor" 
         aria-label="Etage">
         <option value="NULL">Alle Etagen</option>
-        <option value="hg">HG</option>
-        <option value="eg">EG</option>
-        <option value="1.og">1. OG</option>
-        <option value="2.og">2. OG</option>
-        <option value="dg">DG</option>
+        {{# <option value="hg">HG</option> #}}
+        <option value="0">EG</option>
+        <option value="1">1. OG</option>
+        <option value="2">2. OG</option>
+        <option value="3">DG</option>
       </select>
     </div>
   {{ /partial:layout/span }}

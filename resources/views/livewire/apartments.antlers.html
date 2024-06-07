@@ -1,5 +1,25 @@
 <div>
-  {{ apartments }}
-    {{ reference }}
-  {{ /apartments }}
+  {{ partial:objects/building 
+    :apartments="apartments['building_1']" 
+    :title="addresses['building_1']"
+    :date="reference_date['building_1']"
+    building="01" }}
+
+  {{ partial:objects/building 
+    :apartments="apartments['building_2']" 
+    :title="addresses['building_2']"
+    :date="reference_date['building_2']"
+    building="02" }}
+
+  {{ partial:objects/building 
+    :apartments="apartments['building_3']" 
+    :title="addresses['building_3']"
+    :date="reference_date['building_3']"
+    building="03" }}
+
+  {{ partial:objects/building 
+    :apartments="apartments['building_4']" 
+    :title="addresses['building_4']"
+    :date="reference_date['building_4']"
+    building="04" }}
 </div>

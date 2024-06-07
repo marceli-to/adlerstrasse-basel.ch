@@ -1,48 +1,54 @@
 <div data-building="{{ building}}">
-  {{ partial:components/headings/h2 title="{{ title }}" class="!mb-10" }}
-  {{ collection from="objects" as="objects" sort="order" building:is="{{ building }}" }}
-    {{ partial:components/table/table class="mb-20 lg:mb-40" }}
-      {{ partial:components/table/thead }}
-      {{ objects }}
-        {{ partial:components/table/trow filterable="true" number="{{ number }}" state="{{ state }}" rooms="{{ rooms }}" floor="{{ floor }}" building="{{ building }}" }}
-          {{ partial:components/table/tcell class="!pr-0" }}
-            {{ number }}
-          {{ /partial:components/table/tcell }}
-          {{ partial:components/table/tcell class="!pr-4 md:!pr-10" }}
-            {{ floor:label | replace(' ', '&nbsp;') }}
-          {{ /partial:components/table/tcell }}
-          {{ partial:components/table/tcell }}
-            {{ rooms }}
-          {{ /partial:components/table/tcell }}
-          {{ partial:components/table/tcell class="text-right" }}
-            {{ space_gross }}
-          {{ /partial:components/table/tcell }}
-          {{ partial:components/table/tcell class="text-right" }}
-            {{ space_outer }}
-          {{ /partial:components/table/tcell }}
-          {{ partial:components/table/tcell class="text-right" }}
-            {{ rent_gross | format_number(0, '.', '\'') }}
-          {{ /partial:components/table/tcell }}
-          {{ partial:components/table/tcell class="text-center" }}
-            <a href="/assets/downloads/adlerstrasse-basel-wohnung-{{ number }}.pdf" target="_blank" title="Download Grundriss Objekt {{ number }}">
-              {{ partial:icons/download }}
+  {{ partial:components/headings/h2 title="{{ title }}" class="!mb-5" }}
+  <div class="font-lato-black font-black text-steel text-xs lg:text-sm mb-10">
+    Bezugstermin {{ date }}
+  </div>
+  {{ partial:components/table/table class="mb-20 lg:mb-40" }}
+    {{ partial:components/table/thead }}
+    {{ apartments }}
+      {{ partial:components/table/trow 
+          filterable="true" 
+          number="{{ ref_house }}-{{ ref_object }}" 
+          state="{{ state:get :state="status" :reserved="reserved" key="true" }}" 
+          rooms="{{ number_of_rooms }}" 
+          floor="{{ floor }}" 
+          building="{{ ref_house }}" }}
+        {{ partial:components/table/tcell class="!pr-0" }}
+          {{ ref_house }}-{{ ref_object }}
+        {{ /partial:components/table/tcell }}
+        {{ partial:components/table/tcell class="!pr-4 md:!pr-10" }}
+          {{ floors:get :floor="floor" }}
+        {{ /partial:components/table/tcell }}
+        {{ partial:components/table/tcell }}
+          {{ number_of_rooms }}
+        {{ /partial:components/table/tcell }}
+        {{ partial:components/table/tcell class="text-right" }}
+          {{ surface_living }}
+        {{ /partial:components/table/tcell }}
+        {{ partial:components/table/tcell class="text-right" }}
+          {{ if {state:available :state="status" :reserved="reserved"} }}
+            {{ rent_gross | format_number(2, '.', '\'') }}
+          {{ /if }}
+        {{ /partial:components/table/tcell }}
+        {{ partial:components/table/tcell class="text-center" }}
+          <a href="/assets/downloads/adlerstrasse-basel-wohnung-{{ ref_house }}-{{ ref_object }}.pdf" target="_blank" title="Download Grundriss Objekt {{ ref_house }}-{{ ref_object }}">
+            {{ partial:icons/download }}
+          </a>
+        {{ /partial:components/table/tcell }}
+        {{ partial:components/table/tcell class="text-xxs sm:text-sm text-right align-middle !pr-0" }}
+          {{ if {state:available :state="status" :reserved="reserved"} }}
+            <a 
+              href="https://flatfox.ch/de/listing{{ short_url }}submit/" 
+              target="_blank"
+              title="Jetzt auf Flatfox anmelden"
+              class="text-white hover:brightness-110 bg-steel transition-all inline-flex items-center px-5 h-25 rounded-sm leading-none">
+              Flatfox
             </a>
-          {{ /partial:components/table/tcell }}
-            {{ partial:components/table/tcell class="text-xxs sm:text-sm text-right align-middle !pr-0" }}
-              {{ if state == 'available' }}
-                <a href=""
-                  class="text-white hover:brightness-110 bg-steel transition-all inline-flex items-center px-5 h-25 rounded-sm leading-none">
-                  Flatfox
-                </a>
-              {{ elseif state == 'reserved' }}
-                reserviert
-              {{ else }}
-                vermietet
-              {{ /if }}
-          {{ /partial:components/table/tcell }}
-        {{ /partial:components/table/trow }}
-      {{ /objects }}
-    {{ /partial:components/table/table }}
-
-  {{ /collection }}
+          {{ else }}
+            {{ state:get :state="status" :reserved="reserved" }}
+          {{ /if }}
+        {{ /partial:components/table/tcell }}
+      {{ /partial:components/table/trow }}
+    {{ /apartments }}
+  {{ /partial:components/table/table }}
 </div>
