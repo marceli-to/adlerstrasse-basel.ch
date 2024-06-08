@@ -3,6 +3,7 @@ const Iso = (function() {
   const selectors = {
     body: 'body',
     object: '[data-object]',
+    building: '[data-building]',
     iso: '[data-iso]',
     floor: '[data-iso-floor]',
   };
@@ -99,6 +100,21 @@ const Iso = (function() {
     const objectData = object.dataset;
     object.classList.add('is-active');
     iso.classList.add('is-active', objectData.objectState === 'free' ? 'is-available' : 'is-taken');
+
+    // Get the objects parent 'data-building' element
+    const building = object.closest(selectors.building);
+
+    // Get all 'data-building' elements
+    const buildings = document.querySelectorAll(selectors.building);
+    // Hide all buildings except the one that the object is in
+    buildings.forEach(function(building) {
+      if (building === object.closest(selectors.building)) {
+        building.classList.remove('hidden');
+        return;
+      }
+      building.classList.add('hidden');
+    });
+
   };
 
   const clearIso = function() {
@@ -115,6 +131,14 @@ const Iso = (function() {
       siblings.forEach(function(sibling) {
         sibling.classList.remove('is-up');
       });
+
+      // Get all 'data-building' elements
+      const buildings = document.querySelectorAll(selectors.building);
+      // Show all buildings
+      buildings.forEach(function(building) {
+        building.classList.remove('hidden');
+      });
+
     });
   };
 
