@@ -16,6 +16,8 @@ class Floors extends Tags
       1 => '1. OG',
       2 => '2. OG',
       3 => 'DG' ];
-    return $this->params->get('floor') ?? 'EG';
+
+    return $this->params->get('floor') ? $floors[$this->params->get('floor')] : 'EG';
+
   }
 }
