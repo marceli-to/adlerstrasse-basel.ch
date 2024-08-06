@@ -17,7 +17,7 @@
           {{ ref_house }}-{{ ref_object }}
         {{ /partial:components/table/tcell }}
         {{ partial:components/table/tcell class="!pr-4 md:!pr-10" }}
-          {{ floors:get :floor="floor" }}
+          {{ floors:get :floor="floor" }} {{ floor }}
         {{ /partial:components/table/tcell }}
         {{ partial:components/table/tcell }}
           {{ number_of_rooms }}
