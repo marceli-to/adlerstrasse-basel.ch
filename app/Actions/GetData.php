@@ -29,6 +29,7 @@ class GetData
     $data = Storage::disk('public')->get('apartements.json');
     $data = collect(json_decode($data, true));
 
+    // Get State
     $states = $this->getState($data);
     $data = $data->map(function ($apartment) use ($states) {
       $apartment['state'] = $states[$apartment['reference']] ?? $this->status_free;
@@ -46,7 +47,7 @@ class GetData
     return $data; 
   }
 
-  private function getState($all_listings)
+  private function getState($all_listings): array
   {
     // Group status by listing reference (or id, if reference is missing)
     $listing_status = [];
