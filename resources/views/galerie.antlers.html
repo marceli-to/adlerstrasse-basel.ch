@@ -1,0 +1,14 @@
+{{ partial:layout/section class="bg-cloud" }}
+  {{ partial:layout/inner }}
+    {{ partial:components/headings/h1 title="Galerie" }}
+    
+    {{ partial:layout/grid class="sm:gap-16 lg:!gap-20" }}
+      {{ loop from="1" to="30" }}
+        <a href="/assets/adlerstrasse-basel-galerie-{{ value }}.jpg" class="block mb-15 sm:mb-0 sm:col-span-4 lg:col-span-3" data-fancybox>
+          <img src="/assets/adlerstrasse-basel-galerie-{{ value }}-thumb.jpg" alt="" class="w-full h-auto block">
+        </a>
+      {{ /loop }}
+    {{ /partial:layout/grid }}
+
+  {{ /partial:layout/inner }}
+{{ /partial:layout/section }}

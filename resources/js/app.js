@@ -11,4 +11,4 @@ import './modules/maps.js';
 import './modules/swiper.js';
 import './modules/iso.js';
 import './modules/filter.js';
-// import './modules/fancybox.js';
+import './modules/fancybox.js';
