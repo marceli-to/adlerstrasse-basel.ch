@@ -11,6 +11,14 @@ class FetchData
     $json_data = collect(json_decode($data, true));
     $apartment_pages[] = isset($json_data['results']) ? $json_data['results'] : [];
 
+    // DEBUG
+    // loop over $json_data['results'] and write 'reference' and 'status' in a text file
+    foreach ($json_data['results'] as $apartment)
+    {
+      Storage::disk('public')->append('apartements.txt', $apartment['reference'] . ' - ' . $apartment['status']);
+    }
+    // -- DEBUG
+
     // if $json_data['next'] is not null, there are more pages to fetch
     while ($json_data['next'] !== null)
     {

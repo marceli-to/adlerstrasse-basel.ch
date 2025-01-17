@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Storage;
 
 class GetData
 {
-  
   // All possible listing status
   protected $listing_status_all = ["pre", "act", "dis", "arc", "rem"];
   protected $listing_status_active = ["pre", "act", "dis"];
@@ -28,14 +27,13 @@ class GetData
     }
     $data = Storage::disk('public')->get('apartements.json');
     $data = collect(json_decode($data, true));
-
     // Get State
     $states = $this->getState($data);
     $data = $data->map(function ($apartment) use ($states) {
       $apartment['state'] = $states[$apartment['reference']] ?? $this->status_free;
       return $apartment;
     });
-    $data = $data->unique('reference');
+    // $data = $data->unique('reference');
 
     // Added for fix (09.11.2023)
     // it is possible that the same listing is in the list twice, so we need to remove duplicates
